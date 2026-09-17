@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --bg-dark-blue: #1B2B6B;
+    --primary-blue: #0A3BAA;
+    --accent-blue: #2563EB;
+    --light-bg: #F8FAFC;
+    --text-dark: #1E293B;
+    --text-muted: #64748B;
+    --accent-orange: #FF6B35;
+    --accent-yellow: #FFC107;
+    --accent-green: #22C55E;
+}
+
+body {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* --- HEADER / NAVBAR --- */
+header {
+    background-color: #212acf;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    color: white;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px; 
+    width: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+nav a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #22C55E;
+}
+
+.btn-header {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-header:hover {
+    background-color: #e76a7b;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    flex: 1;
+    position: relative;
+    min-height: calc(100vh - 70px);
+    font-family: 'Catamaran', sans-serif;
+}
+
+/* Coluna da Esquerda (Clara) */
+.hero-left {
+    flex: 1.1;
+    padding: 80px 5% 60px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+    font-family:'Catamaran', sans-serif;
+}
+
+.tagline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.tagline-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-orange);
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.15;
+    color: #0F172A;
+    margin-bottom: 20px;
+    font-family:'Catamaran', sans-serif;
+    max-width: 520px;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 480px;
+}
+
+.cta-group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 60px;
+}
+
+.btn-primary {
+    background-color:#212acf;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 4px 14px rgba(27, 43, 107, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #22C55E;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1px solid #CBD5E1;
+    padding: 14px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #F1F5F9;
+    border-color: #94A3B8;
+}
+
+/* Trust Badges */
+.trust-badges {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    border-top: 1px solid #E2E8F0;
+    padding-top: 24px;
+    max-width: 500px;
+}
+
+.badge-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.badge-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #FEF3C7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.badge-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #334155;
+    line-height: 1.2;
+}
+
+/* Coluna da Direita (Azul com Corte Diagonal) */
+.hero-right {
+    flex: 1;
+    background-color: var(--primary-blue);
+    position: relative;
+    padding: 60px 5% 60px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0% 100%);
+    margin-left: -4%;
+    font-family:'Catamaran', sans-serif;
+}
+
+/* Tabs de Seleção */
+.card-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+.tab-btn {
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab-btn.orange {
+    background-color: #ff9a98;
+    color: rgb(2, 19, 65);
+}
+
+.tab-btn.dark {
+    background-color: #68e69a;
+    color:  rgb(2, 19, 65);
+}
+
+.tab-btn.green {
+    background-color:#ffe372;
+    color:  rgb(2, 19, 65);
+}
+
+/* Mockup do Cartão */
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+.card-badge-popular {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color:#212acf;
+    color: #e9ebf0;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Informações do Cartão Selecionado */
+.card-details-box {
+    width: 340px;
+    color: rgb(245, 243, 243);
+    z-index: 2;
+}
+
+.card-details-box h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-top: 30px;
+}
+
+.card-details-box p {
+    font-size: 0.85rem;
+    color: #93C5FD;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+.card-benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-benefits-list li {
+    font-size: 0.85rem;
+    color: #E0E7FF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-benefits-list li::before {
+    content: "•";
+    color: var(--accent-yellow);
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+/* Responsividade Básica */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-right {
+        clip-path: none;
+        margin-left: 0;
+        padding: 60px 20px;
+    }
+
+    .hero-left {
+        padding: 40px 20px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+.cartoes {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.cartoes-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.cartoes-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding-bottom: 15px;
+    scrollbar-width: none; /* Esconde a barra de rolagem no Firefox */
+}
+
+/* Esconde a barra de rolagem no Chrome, Safari e Opera */
+.cartoes-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.cartao-item {
+    flex: 0 0 320px; /* Largura fixa de cada cartão no carrossel */
+    scroll-snap-align: start;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.cartao-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Botões do carrossel */
+.carousel-btn {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+    background-color: #f5f5f5;
+}
+
+.prev-btn {
+    left: -22px;
+}
+
+.next-btn {
+    right: -22px;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 768px) {
+    .cartao-item {
+        flex: 0 0 85%; /* No celular o cartão ocupa boa parte da tela para rolar arrastando */
+    }
+    .prev-btn, .next-btn {
+        display: none; /* Oculta as setas em telas touch, permitindo arrastar com o dedo */
+    }
+}
