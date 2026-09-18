@@ -371,8 +371,8 @@ nav a:hover {
 }
 
 .sobre {
-    background-color: #16b99e;
-    color: #ffffff;
+    background-color: #7df4ed;
+    color: #092158;
     font-family: 'Catamaran', sans-serif;
     display: flex;
     flex-direction: row; 
@@ -386,31 +386,39 @@ nav a:hover {
     
  }
 
- .footer{
-    background: #1b22ad;
-    padding: 2.5rem 0 0;
-    position: relative;
+ .footer {
     display: flex;
-    color: white;
-    flex-direction: row;
-    align-items: center;
-    font-family: 'Catamaran', sans-serif;
- }
- 
- .nav.footer{
-    
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    background-color: #171ea3;
+}
+
+.nav-footer {
+    padding-left: 0;
     list-style: none;
-    padding: 0;
-    margin: 0;
- }
- .footer-title{
+}
+
+.nav-footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.nav-footer a:hover {
+    color: #ffe372;
+}
+
+.footer-title {
     font-size: 1.2rem;
     font-weight: 700;
-    justify-self: center;
-    margin-left: auto;
-    margin-bottom: 1rem;
+    text-align: center;
+    margin: 2rem auto 1rem auto; 
     color: #ffffff;
- }
+    font-family: 'Catamaran', sans-serif;
+}
 
 .footer-bottom{
     width: 100%;
@@ -487,4 +495,116 @@ nav a:hover {
 
 .store-link img:hover {
   transform: scale(1.03);
+}
+
+.top-color-bar {
+    display: flex;
+    width: 100%;
+    height: 12px;
+}
+
+.top-color-bar span {
+    flex: 1;
+    height: 100%;
+}
+
+.bar-blue { background-color: #0056b3; }
+.bar-yellow { background-color: #ffe372; }
+.bar-pink { background-color: #ff9a98; }
+.bar-green { background-color: #68e69a; }
+.bar-cyan { background-color: #7df4ed; }
+
+
+.cards-container-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 60px;
+
+
+}
+
+
+.page-title {
+    background-color: #68e69a; 
+    color: #212acf;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.cards-grid {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.card-box {
+    border-radius: 12px;
+    width: 260px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card-header {
+    background-color: #212acf;
+    color: #68e69a;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    padding: 10px 0;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+
+.card-visual {
+    background-color: #000b68;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    width: 150%;  /* Deixa a imagem mais larga que o background */
+    height: 130%; /* Deixa a imagem mais alta que os 300px do background, forçando o transbordo */
+    object-fit: contain;
+    position: relative;
+    z-index: 5;   /* Garante que a imagem fique por cima do background e de outros elementos se necessário */
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3));
+}
+.btn-select {
+    background-color: #5be492;
+    color: #212acf;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-select:hover {
+    background-color: #0056b3;
 }
