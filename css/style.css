@@ -155,7 +155,7 @@ nav a:hover {
 }
 
 .btn-primary {
-    background-color:#212acf;
+    background-color:#ff9a98;
     color: white;
     padding: 14px 28px;
     border-radius: 50px;
@@ -172,7 +172,7 @@ nav a:hover {
 }
 
 .btn-secondary {
-    background-color:#212acf;
+    background-color:#ff9a98;
     color: white;
     padding: 14px 28px;
     border-radius: 50px;
@@ -371,16 +371,120 @@ nav a:hover {
 }
 
 .sobre {
-    background-color: #1820ad;
+    background-color: #16b99e;
     color: #ffffff;
     font-family: 'Catamaran', sans-serif;
     display: flex;
     flex-direction: row; 
     align-items: center;
     gap: 30px; 
+    font-size: 1.1rem;
 }
  .sobre-img {
     border-radius: 25px;
     margin: 30px;
     
  }
+
+ .footer{
+    background: #1b22ad;
+    padding: 2.5rem 0 0;
+    position: relative;
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Catamaran', sans-serif;
+ }
+ 
+ .nav.footer{
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ .footer-title{
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-self: center;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    color: #ffffff;
+ }
+
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+
+ .download-app-section {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  padding: 20px;
+  text-align: left; 
+}
+
+/* Container da imagem com cantos arredondados */
+.app-image-container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.app-image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+}
+
+/* Estilização do Título */
+.app-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 12px;
+}
+
+/* Efeito do círculo/elipse ao redor de "DM App" */
+.highlight-circle {
+  position: relative;
+  display: inline-block;
+  border: 2px solid #e07a8a; /* Cor avermelhada/rosa parecida com a da imagem */
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; /* Bordas levemente orgânicas estilo desenho à mão */
+  padding: 2px 10px;
+  transform: rotate(-1deg5); /* Leve rotação opcional para dar toque orgânico */
+}
+
+/* Parágrafo descritivo */
+.app-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Container dos botões das lojas */
+.store-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap; /* Garante responsividade em telas menores */
+}
+
+/* Estilo individual dos links/botões das lojas */
+.store-link img {
+  height: 44px; /* Altura padrão para os badges das lojas */
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.store-link img:hover {
+  transform: scale(1.03);
+}
