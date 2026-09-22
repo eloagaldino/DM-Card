@@ -26,6 +26,7 @@ body {
     font-family: 'Catamaran', sans-serif;
 }
 
+/* PÁGINA HOME */
 header {
     background-color: #212acf;
     font-family: 'Catamaran', sans-serif;;
@@ -98,7 +99,7 @@ nav a:hover {
     font-family: 'Catamaran', sans-serif; 
 }
 
-/* Coluna da Esquerda (Clara) */
+
 .hero-left {
     flex: 0.7;
     padding: 80px 5% 60px 8%;
@@ -173,7 +174,7 @@ nav a:hover {
 }
 
 
-/* Trust Badges */
+
 .trust-badges {
     display: flex;
     align-items: center;
@@ -207,7 +208,7 @@ nav a:hover {
     line-height: 1.2;
 }
 
-/* Coluna da Direita (Azul com Corte Diagonal) */
+
 .hero-right {
     flex: 1.5;
     background-color:#1a20a1;
@@ -253,8 +254,8 @@ nav a:hover {
 }
 
 .linha-colorida {
-    height: 10px; /* Altura da linha */
-    width: 100%; /* Largura total da tela */
+    height: 10px; 
+    width: 100%; 
     background: linear-gradient(
       to right,
       #212acf 0%,   #212acf 25%,  
@@ -264,7 +265,7 @@ nav a:hover {
     );
   }
 
-/* Responsividade Básica */
+
 @media (max-width: 900px) {
     .hero {
         flex-direction: column;
@@ -325,7 +326,7 @@ nav a:hover {
 
 
 .cartao-item {
-    flex: 0 0 320px; /* Largura fixa de cada cartão no carrossel */
+    flex: 0 0 320px; 
     scroll-snap-align: start;
     background: #f0da76;
     border-radius: 12px;
@@ -413,6 +414,7 @@ nav a:hover {
     font-size: 0.9rem;
 }
 
+/* PÁGINA DM APP */
 
  .download-app-section {
   max-width: 800px;
@@ -423,7 +425,7 @@ nav a:hover {
   text-align: left; 
 }
 
-/* Container da imagem com cantos arredondados */
+
 .app-image-container {
   width: 100%;
   margin-bottom: 24px;
@@ -437,7 +439,7 @@ nav a:hover {
   display: block;
 }
 
-/* Estilização do Título */
+
 .app-content h2 {
   font-size: 28px;
   font-weight: 700;
@@ -466,14 +468,17 @@ nav a:hover {
 
 .store-buttons {
   display: flex;
-  gap: 50px;
+  gap: 70px;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap; 
 }
 
 
 .store-link img {
-  height: 60px; 
+    display: flex;
+    justify-content: center;
+    height: 60px; 
   width: auto;
   transition: transform 0.2s ease;
 }
@@ -500,6 +505,8 @@ nav a:hover {
 .bar-green { background-color: #68e69a; }
 .bar-cyan { background-color: #7df4ed; }
 
+
+/* PÁGINA CARTÕES */
 
 .cards-container-page {
     display: flex;
@@ -545,15 +552,15 @@ nav a:hover {
 
 .card-header {
     background-color: #212acf;
+    border-radius: 40px;
     color: #68e69a;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    font-weight: 800;
-    font-size: 1rem;
+    font-weight: 900;
+    font-size: 1.2rem;
     text-align: center;
     width: 100%;
-    height: 40px;
+    height: 50px;
     padding: 10px 0;
-    border-radius: 6px;
     margin-bottom: 20px;
 }
 
@@ -593,5 +600,398 @@ nav a:hover {
 }
 
 .btn-select:hover {
-    background-color: #0056b3;
+    background-color: #ff9a98;
 }
+
+/* PÁGINA DÚVIDAS */
+
+
+.faq-section {
+            width: 100%;
+            max-width: 820px;
+            margin: 40px auto;
+            padding: 0 20px;
+            flex: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: var(--dm-text-dark);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .section-subtitle {
+            color: var(--dm-text-muted);
+            font-size: 1rem;
+        }
+
+        .faq-accordion {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .faq-card {
+            background-color: var(--dm-card-bg);
+            border-radius: var(--dm-radius);
+            box-shadow: var(--dm-shadow-sm);
+            overflow: hidden;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+        }
+
+        .faq-card:hover {
+            border-color: #cbd5e1;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        .faq-card.is-active {
+            border-color: var(--dm-blue-primary);
+            box-shadow: var(--dm-shadow-md);
+        }
+
+        /* O botão do cabeçalho da pergunta */
+        .faq-button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            background: #f0f1f5;
+            border-radius: 30px;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--dm-text-dark);
+            transition: color 0.2s ease, background-color 0.2s ease;
+            gap: 16px;
+            outline: none;
+        }
+
+        .faq-button:hover {
+            background-color: var(--dm-blue-light);
+            color: var(--dm-blue-primary);
+        }
+
+        .faq-button:focus-visible {
+            outline: 2px solid var(--dm-blue-primary);
+            outline-offset: -2px;
+        }
+
+     
+        .faq-icon-wrapper {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #212acf;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: background-color 0.3s ease, transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-card.is-active .faq-icon-wrapper {
+            background-color: var(--dm-blue-primary);
+            transform: rotate(180deg);
+        }
+
+        .faq-icon-svg {
+            background-color: #21d368;
+            border-radius: 30px;
+            width: 10px;
+            height: 10px;
+            fill: none;
+            stroke: var(--dm-text-muted);
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: stroke 0.3s ease;
+        }
+
+        .faq-card.is-active .faq-icon-svg {
+            stroke: #ffffff;
+        }
+
+        
+        .faq-content-wrapper {
+            display: grid;
+            grid-template-rows: 0fr;
+            transition: grid-template-rows var(--dm-transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .faq-card.is-active .faq-content-wrapper {
+            grid-template-rows: 1fr;
+        }
+
+        .faq-content-inner {
+            min-height: 0;
+            overflow: hidden;
+            transition: opacity var(--dm-transition-speed) ease, padding var(--dm-transition-speed) ease;
+            opacity: 0;
+            padding: 0 24px;
+        }
+
+        .faq-card.is-active .faq-content-inner {
+            opacity: 1;
+            padding: 0 24px 22px 24px;
+        }
+
+        .faq-body-text {
+            color: #475569;
+            font-size: 0.975rem;
+            line-height: 1.65;
+            border-top: 1px solid var(--dm-border-color);
+            padding-top: 16px;
+        }
+
+        .faq-body-text p {
+            margin-bottom: 12px;
+        }
+
+        .faq-body-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-list {
+            list-style: none;
+            margin: 12px 0;
+            padding-left: 0;
+        }
+
+        .faq-list li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+
+        .faq-list li::before {
+            content: "•";
+            color: var(--dm-blue-primary);
+            font-weight: bold;
+            font-size: 1.3rem;
+            position: absolute;
+            left: 4px;
+            top: -2px;
+        }
+
+       
+        .faq-cta-container {
+            background-color: #ff9a98;
+            text-align: center;
+            margin-top: 36px;
+            border-radius: 30px;
+        }
+
+        .btn-dm-primary {
+            display: inline-block;
+            background-color: var(--dm-blue-primary);
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 14px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+        }
+
+        .btn-dm-primary:hover {
+            background-color: var(--dm-blue-hover);
+            transform: translateY(-2px);
+        }
+
+        .site-footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 40px 24px 24px 24px;
+            margin-top: auto;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* PÁGINA CADASTRO */
+        .cadastro-title {
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+
+        .cadastro-container {
+    max-width: 650px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.cadastro-title {
+    margin-bottom: 20px;
+}
+
+.cadastro-title h1 {
+    font-size: 35px;
+    color: #1a202c;
+    margin-top:10px;
+}
+
+.cadastro-title p {
+    font-size: 15px;
+    color: #495261;
+}
+
+.dados-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-campo {
+    font-size: 19px;
+    font-weight: 600;
+    color: #212acf;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e0;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #2d3748;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    outline: none;
+    border-color: #68e69a;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.15);
+}
+
+.doc-text {
+    border: 2px dashed #cbd5e0;
+    border-radius: 8px;
+    padding: 22px;
+    text-align: center;
+    background-color: #fafbfc;
+    color: #4a5568;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.doc-text:hover {
+    background-color: #f0f4f8;
+    border-color: #a0aec0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    background-color: #68e69a;
+    color: #212acf;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-enviar:hover {
+    background-color: #00d95a;
+}
+
+
+.cadastro-container form p {
+    text-align: center;
+    font-size: 11px;
+    color: #a0aec0;
+    margin-top: 15px;
+}
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            color: white;
+            border-top: 1px solid #1e293b;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        
+        @media (max-width: 640px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .faq-button {
+                padding: 16px 18px;
+                font-size: 0.98rem;
+            }
+            .faq-content-inner {
+                padding: 0 18px;
+            }
+            .faq-card.is-active .faq-content-inner {
+                padding: 0 18px 18px 18px;
+            }
+        }
+   
